@@ -31,7 +31,7 @@ class _AddTodoScreenState extends State<AddTodoScreen> {
               onPressed: () {
                 context
                     .read<TodoState>()
-                    .addTodo(Todo(id: '0', title: _controller.text));
+                    .addTodo(Todo(title: _controller.text));
                 Navigator.pop(context);
               },
               child: const Text('Add'),
