@@ -29,9 +29,7 @@ class _AddTodoScreenState extends State<AddTodoScreen> {
             TextField(controller: _controller),
             ElevatedButton(
               onPressed: () {
-                context
-                    .read<TodoState>()
-                    .addTodo(Todo(id: '0', title: _controller.text));
+                context.read<TodoState>().addTodo(_controller.text);
                 Navigator.pop(context);
               },
               child: const Text('Add'),
